@@ -1,2 +1,2 @@
 # simple-form
-# Pure html + scss
+Just a simple HTML form with pure html and scss
