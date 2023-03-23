@@ -327,4 +327,205 @@ template {
   font-style: normal;
   font-weight: 700;
   src: url("/assets/fonts/barlow/Barlow-Bold.otf") format("opentype");
+}
+body {
+  background: #eff6ff;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-block {
+  width: 1440px;
+  height: 1000px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form-block__left-side {
+  background: url("/assets/img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+.form-block__right-side {
+  background: #ffffff;
+}
+
+.form-content {
+  padding: 74px 74px;
+}
+.form-content__heading {
+  margin: 0;
+  font-family: "Barlow";
+  font-weight: 500;
+  color: #284759;
+  font-size: 32px;
+}
+.form-content__text {
+  font-family: "Barlow";
+  font-weight: 400;
+  color: #284759;
+  font-size: 20px;
+}
+
+.register-via-socials {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  padding-top: 50px;
+}
+.register-via-socials__button {
+  text-decoration: none;
+  font-family: "Barlow";
+  font-weight: 400;
+  color: white;
+  background: red;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.register-via-socials__button_facebook {
+  background: #255b9b;
+}
+.register-via-socials__button_linkedin {
+  background: #0076b6;
+}
+.register-via-socials__icon {
+  height: 20px;
+  padding-right: 15px;
+}
+
+.or {
+  padding-top: 50px;
+  padding-bottom: 46px;
+}
+.or__line {
+  position: relative;
+  width: 240px;
+}
+.or__line:after {
+  font-family: "Barlow";
+  font-weight: 400;
+  content: "OR";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 8px;
+  background: #ffffff;
+}
+
+.input-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  padding-bottom: 60px;
+}
+.input-container .input-block {
+  font-family: "Barlow";
+  font-weight: 400;
+  position: relative;
+}
+.input-container .input-block__label {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  color: rgba(40, 71, 89, 0.4784313725);
+}
+.input-container .input-block__input {
+  background: none;
+  border: none;
+  border: 1px solid #efefef;
+  border-radius: 1px;
+  padding: 30px 8px 10px 8px;
+  width: 100%;
+  transition: border 0.1s;
+}
+.input-container .input-block__input:focus-visible {
+  background: none;
+  border: none;
+  outline: none;
+}
+.input-container .input-block__input:focus {
+  border: 1px solid #efefef;
+  border-left: 1px solid #3597fc;
+}
+
+.radio-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+.radio-input-container .radio-input-control {
+  font-family: "Barlow";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.radio-input-container .radio-input-control span {
+  padding-left: 8px;
+}
+
+.small-text-container {
+  font-family: "Barlow";
+  font-weight: 400;
+  padding-top: 20px;
+}
+.small-text-container .small-text {
+  max-width: 255px;
+  margin: 0;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input-checkbox-container {
+  font-family: "Barlow";
+  font-weight: 400;
+  padding-top: 45px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.input-checkbox-container a {
+  color: #3698fb;
+}
+
+.input-submit-container {
+  padding-top: 55px;
+}
+.input-submit-container .input-submit-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: #3698fb;
+  font-family: "Barlow";
+  font-weight: 500;
+  color: white;
+  padding: 12px 68px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.input-submit-container .input-submit-btn:hover {
+  background: #057ef9;
+}
+
+.contact-page {
+  position: relative;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

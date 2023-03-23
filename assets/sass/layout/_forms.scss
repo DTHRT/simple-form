@@ -1,0 +1,193 @@
+body {
+  background: $bg-color;
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-block {
+  width: 1440px;
+  height: 1000px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &__left-side {
+    background: url('/assets/img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+  }
+
+  &__right-side {
+    background: #ffffff;
+  }
+}
+
+.form-content {
+  padding: 74px 74px;
+  &__heading {
+    @include reset-heading;
+    @include barlow-500;
+    color: $form-text-color;
+    font-size: 32px;
+  }
+
+  &__text {
+    @include barlow-400;
+    color: $form-text-color;
+    font-size: 20px;
+  }
+}
+
+.register-via-socials {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  padding-top: 50px;
+
+  &__button {
+    @include reset-link;
+    @include barlow-400;
+    color: white;
+    background: red;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    &_facebook {
+      background: $facebook-color;
+    }
+
+    &_linkedin {
+      background: $linkedin-color;
+    }
+  }
+
+  &__icon {
+    height: 20px;
+    padding-right: 15px;
+  }
+}
+
+.or {
+  padding-top: 50px;
+  padding-bottom: 46px;
+  &__line {
+    position: relative;
+    width: 240px;
+
+    &:after {
+      @include barlow-400;
+      content: 'OR';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 8px;
+      background: #ffffff;
+    }
+  }
+}
+
+.input-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  padding-bottom: 60px;
+
+  .input-block {
+    @include barlow-400;
+    position: relative;
+
+    &__label {
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      color: #2847597a;
+    }
+
+    &__input {
+      @include input-reset;
+      border: 1px solid #efefef;
+      border-radius: 1px;
+      padding: 30px 8px 10px 8px;
+      width: 100%;
+      transition: border 0.1s;
+
+      &:focus {
+        border: 1px solid #efefef;
+        border-left: 1px solid #3597fc;
+      }
+    }
+  }
+}
+
+.radio-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 45px;
+
+  .radio-input-control {
+    @include barlow-500;
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-left: 8px;
+    }
+  }
+}
+
+.small-text-container {
+  @include barlow-400;
+  padding-top: 20px;
+  .small-text {
+    max-width: 255px;
+    margin: 0;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    color: rgb(0 0 0 / 50%);
+  }
+}
+
+.input-checkbox-container {
+  @include barlow-400;
+  padding-top: 45px;
+  color: rgb(0 0 0 / 50%);
+
+  a {
+    color: $blue;
+  }
+}
+
+.input-submit-container {
+  padding-top: 55px;
+
+  .input-submit-btn {
+    @include reset-btn;
+    background: $blue;
+    @include barlow-500;
+    color: white;
+    padding: 12px 68px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken($blue, 10%);
+    }
+  }
+}
