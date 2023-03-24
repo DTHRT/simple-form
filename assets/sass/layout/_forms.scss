@@ -14,15 +14,46 @@ body {
   height: 1000px;
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 760px 1fr;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
+  @media screen and (max-width: 1440px) {
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+
   &__left-side {
+    position: relative;
     background: url('/assets/img/bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 1000px;
+
+    @media screen and (max-width: 1440px) {
+      height: auto;
+    }
+
+    @media screen and (max-width: 1000px) {
+      height: 100px;
+    }
+  }
+
+  &__left-side-logo {
+    position: absolute;
+    top: 43px;
+    left: 50px;
+    width: 141px;
+
+    @media screen and (max-width: 1000px) {
+      left: 39px;
+    }
   }
 
   &__right-side {
@@ -31,18 +62,41 @@ body {
 }
 
 .form-content {
-  padding: 74px 74px;
+  padding: 115px 78px 115px 73px;
+
+  @media screen and (max-width: 1440px) {
+    padding: 57.5px 39px;
+  }
+
   &__heading {
     @include reset-heading;
     @include barlow-500;
     color: $form-text-color;
-    font-size: 32px;
+    font-size: 28px;
+
+    &_second {
+      font-size: 21px;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 24px;
+      }
+    }
   }
 
   &__text {
+    @include reset-p;
     @include barlow-400;
     color: $form-text-color;
     font-size: 20px;
+    margin-top: 15px;
+
+    &_second {
+      font-size: 14px;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 15px;
+      }
+    }
   }
 }
 
@@ -51,7 +105,12 @@ body {
   width: 100%;
   grid-template-columns: 1fr 1fr;
   column-gap: 35px;
-  padding-top: 50px;
+  padding-top: 56px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
   &__button {
     @include reset-link;
@@ -62,13 +121,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: start;
+    transition: background 0.1s;
 
     &_facebook {
       background: $facebook-color;
+
+      &:hover {
+        background: darken($facebook-color, 10%);
+      }
     }
 
     &_linkedin {
       background: $linkedin-color;
+
+      &:hover {
+        background: darken($linkedin-color, 10%);
+      }
     }
   }
 
@@ -89,11 +157,12 @@ body {
       @include barlow-400;
       content: 'OR';
       position: absolute;
-      top: -8px;
+      top: -6px;
       left: 50%;
       transform: translateX(-50%);
       padding: 0 8px;
       background: #ffffff;
+      font-size: 12px;
     }
   }
 }
@@ -103,7 +172,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 35px;
-  padding-bottom: 60px;
+  padding-bottom: 51px;
 
   .input-block {
     @include barlow-400;
@@ -136,7 +205,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 45px;
+  padding-top: 50px;
 
   .radio-input-control {
     @include barlow-500;
@@ -159,6 +228,7 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px;
     color: rgb(0 0 0 / 50%);
+    font-size: 16px;
   }
 }
 
@@ -175,6 +245,11 @@ body {
 .input-submit-container {
   padding-top: 55px;
 
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+  }
+
   .input-submit-btn {
     @include reset-btn;
     background: $blue;
@@ -182,7 +257,7 @@ body {
     color: white;
     padding: 12px 68px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     transition: background 0.2s;
 

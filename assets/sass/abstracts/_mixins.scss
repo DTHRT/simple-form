@@ -17,6 +17,10 @@
   margin: 0;
 }
 
+@mixin reset-p {
+  margin: 0;
+}
+
 @mixin reset-link {
   text-decoration: none;
 }

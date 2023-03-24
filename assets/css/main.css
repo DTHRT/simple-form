@@ -344,35 +344,93 @@ body {
   height: 1000px;
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 760px 1fr;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+@media screen and (max-width: 1440px) {
+  .form-block {
+    grid-template-columns: 1fr 1fr;
+    width: 1000px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .form-block {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+}
 .form-block__left-side {
+  position: relative;
   background: url("/assets/img/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 1000px;
 }
+@media screen and (max-width: 1440px) {
+  .form-block__left-side {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .form-block__left-side {
+    height: 100px;
+  }
+}
+.form-block__left-side-logo {
+  position: absolute;
+  top: 43px;
+  left: 50px;
+  width: 141px;
+}
+@media screen and (max-width: 1000px) {
+  .form-block__left-side-logo {
+    left: 39px;
+  }
+}
 .form-block__right-side {
   background: #ffffff;
 }
 
 .form-content {
-  padding: 74px 74px;
+  padding: 115px 78px 115px 73px;
+}
+@media screen and (max-width: 1440px) {
+  .form-content {
+    padding: 57.5px 39px;
+  }
 }
 .form-content__heading {
   margin: 0;
   font-family: "Barlow";
   font-weight: 500;
   color: #284759;
-  font-size: 32px;
+  font-size: 28px;
+}
+.form-content__heading_second {
+  font-size: 21px;
+}
+@media screen and (max-width: 1440px) {
+  .form-content__heading_second {
+    font-size: 24px;
+  }
 }
 .form-content__text {
+  margin: 0;
   font-family: "Barlow";
   font-weight: 400;
   color: #284759;
   font-size: 20px;
+  margin-top: 15px;
+}
+.form-content__text_second {
+  font-size: 14px;
+}
+@media screen and (max-width: 1440px) {
+  .form-content__text_second {
+    font-size: 15px;
+  }
 }
 
 .register-via-socials {
@@ -381,7 +439,13 @@ body {
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 35px;
        column-gap: 35px;
-  padding-top: 50px;
+  padding-top: 56px;
+}
+@media screen and (max-width: 1000px) {
+  .register-via-socials {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 .register-via-socials__button {
   text-decoration: none;
@@ -393,12 +457,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
+  transition: background 0.1s;
 }
 .register-via-socials__button_facebook {
   background: #255b9b;
 }
+.register-via-socials__button_facebook:hover {
+  background: #1b4372;
+}
 .register-via-socials__button_linkedin {
   background: #0076b6;
+}
+.register-via-socials__button_linkedin:hover {
+  background: #005583;
 }
 .register-via-socials__icon {
   height: 20px;
@@ -418,11 +489,12 @@ body {
   font-weight: 400;
   content: "OR";
   position: absolute;
-  top: -8px;
+  top: -6px;
   left: 50%;
   transform: translateX(-50%);
   padding: 0 8px;
   background: #ffffff;
+  font-size: 12px;
 }
 
 .input-container {
@@ -431,7 +503,7 @@ body {
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 35px;
        column-gap: 35px;
-  padding-bottom: 60px;
+  padding-bottom: 51px;
 }
 .input-container .input-block {
   font-family: "Barlow";
@@ -467,7 +539,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-top: 45px;
+  padding-top: 50px;
 }
 .radio-input-container .radio-input-control {
   font-family: "Barlow";
@@ -491,6 +563,7 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
 }
 
 .input-checkbox-container {
@@ -506,6 +579,12 @@ body {
 .input-submit-container {
   padding-top: 55px;
 }
+@media screen and (max-width: 1000px) {
+  .input-submit-container {
+    display: flex;
+    justify-content: center;
+  }
+}
 .input-submit-container .input-submit-btn {
   background: none;
   border: none;
@@ -517,7 +596,7 @@ body {
   color: white;
   padding: 12px 68px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   transition: background 0.2s;
 }
