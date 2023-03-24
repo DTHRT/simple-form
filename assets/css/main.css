@@ -314,19 +314,19 @@ template {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/barlow/Barlow-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/barlow/Barlow-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 500;
-  src: url("/assets/fonts/barlow/Barlow-Medium.otf") format("opentype");
+  src: url("../../assets/fonts/barlow/Barlow-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/barlow/Barlow-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/barlow/Barlow-Bold.otf") format("opentype");
 }
 body {
   background: #eff6ff;
@@ -362,7 +362,7 @@ body {
 }
 .form-block__left-side {
   position: relative;
-  background: url("/assets/img/bg.jpg");
+  background: url("../../assets/img/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
