@@ -28,6 +28,10 @@ body {
     width: auto;
   }
 
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+
   &__left-side {
     position: relative;
     background: url('../../assets/img/bg.jpg');
@@ -66,6 +70,10 @@ body {
 
   @media screen and (max-width: 1440px) {
     padding: 57.5px 39px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 50px 30px;
   }
 
   &__heading {
@@ -174,6 +182,11 @@ body {
   column-gap: 35px;
   padding-bottom: 51px;
 
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
   .input-block {
     @include barlow-400;
     position: relative;
@@ -207,10 +220,18 @@ body {
   justify-content: space-between;
   padding-top: 50px;
 
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+
   .radio-input-control {
     @include barlow-500;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: 20px;
+    }
 
     span {
       padding-left: 8px;
@@ -229,6 +250,10 @@ body {
     border-radius: 5px;
     color: rgb(0 0 0 / 50%);
     font-size: 16px;
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -260,6 +285,10 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background 0.2s;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
 
     &:hover {
       background: darken($blue, 10%);

@@ -360,6 +360,11 @@ body {
     width: auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .form-block {
+    margin-top: 0;
+  }
+}
 .form-block__left-side {
   position: relative;
   background: url("../../assets/img/bg.jpg");
@@ -399,6 +404,11 @@ body {
 @media screen and (max-width: 1440px) {
   .form-content {
     padding: 57.5px 39px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-content {
+    padding: 50px 30px;
   }
 }
 .form-content__heading {
@@ -505,6 +515,12 @@ body {
        column-gap: 35px;
   padding-bottom: 51px;
 }
+@media screen and (max-width: 600px) {
+  .input-container {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
 .input-container .input-block {
   font-family: "Barlow";
   font-weight: 400;
@@ -541,11 +557,21 @@ body {
   justify-content: space-between;
   padding-top: 50px;
 }
+@media screen and (max-width: 600px) {
+  .radio-input-container {
+    flex-direction: column;
+  }
+}
 .radio-input-container .radio-input-control {
   font-family: "Barlow";
   font-weight: 500;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .radio-input-container .radio-input-control {
+    margin-bottom: 20px;
+  }
 }
 .radio-input-container .radio-input-control span {
   padding-left: 8px;
@@ -564,6 +590,11 @@ body {
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.5);
   font-size: 16px;
+}
+@media screen and (max-width: 600px) {
+  .small-text-container .small-text {
+    max-width: 100%;
+  }
 }
 
 .input-checkbox-container {
@@ -599,6 +630,11 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.2s;
+}
+@media screen and (max-width: 600px) {
+  .input-submit-container .input-submit-btn {
+    width: 100%;
+  }
 }
 .input-submit-container .input-submit-btn:hover {
   background: #057ef9;
